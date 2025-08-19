@@ -1,8 +1,10 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
-        Cliente cliente = new Cliente("Ana Clara", "111.222.333-44");
+        Cliente cliente = new Cliente("Ana","1.222.333-44");
         Conta contaDaAna = new Conta(cliente, 500.0);
-
+        Cliente cliente2 = new Cliente("Angel","1111111111");
         System.out.println("--- Dados Iniciais da Conta ---");
         System.out.println("Titular: " + contaDaAna.getTitular().getNome());
         System.out.println("CPF: " + contaDaAna.getTitular().getCpf());
@@ -16,8 +18,9 @@ public class Main {
         contaDaAna.sacar(150.0);
 
         contaDaAna.sacar(1000.0);
-
+        Conta contaDaAngel = new Conta(cliente2, 500.0);;
         System.out.println("\n--- Saldo Final ---");
         System.out.println("Saldo atual: R$" + contaDaAna.getSaldo());
-    }
-}
+        System.out.print("Nova conta criada"+contaDaAngel.getTitular().getNome());
+}}
+
