@@ -1,30 +1,33 @@
-public class Conta {
-    private titular;
-    private saldo;
+class Conta {
+    private Cliente titular;
+    private double saldo;
 
     public Conta(Cliente titular, double saldoInicial) {
         this.titular = titular;
         this.saldo = saldoInicial;
-
     }
-    public void depositar (double valor){
-        if (valor > 0 ){
+
+    public void depositar(double valor) {
+        if (valor > 0) {
             this.saldo += valor;
-            System.out.println("Deposito de " + valor + "Realizado com sucesso.";
-        }else{
-            System.out.println("Valor de deposito ivalido.");
+            // Erro 2: Falta as aspas finais e o parêntese
+            System.out.println("Deposito de " + valor + " realizado com sucesso.");
+        } else {
+            System.out.println("Valor de deposito invalido.");
         }
     }
-    public void sacar (double valor) {
-        if (valor > 0 && this.saldo >- valor) {
+
+    public void sacar(double valor) {
+        if (valor > 0 && this.saldo >= valor) {
             this.saldo -= valor;
-            System.out.println("Saque no valor  de" + valor + " realizado com sucesso.");
-        }else if (valor : this.saldo){
-            System.out.println(" Valor insuficiente");
-        }else{
+            System.out.println("Saque no valor de " + valor + " realizado com sucesso.");
+        } else if (valor > this.saldo) {
+            System.out.println("Saldo insuficiente.");
+        } else {
             System.out.println("Valor de saque invalido");
         }
     }
+
     public double getSaldo() {
         return saldo;
     }
