@@ -30,6 +30,9 @@ public class Main {
    Funcionario funcionario2 = new Funcionario(2,"Cassio","Diretoria");
         System.out.println("Funcionario Criado "+ funcionario2.getRegistro() +", e o mesmo é do nivel "+ funcionario2.getNivel());
 
+    Administrativo administrativo = new Administrativo(3,"AngelDev","Administrativo");
+    administrativo.setSenha(123);
+    administrativo.autentica(123);
 
     }
 }
