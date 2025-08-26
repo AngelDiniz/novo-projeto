@@ -35,5 +35,7 @@ public class Main {
     administrativo.autentica(123);
 
     }
+    int total = Conta.getTotalDeContas();
+
 }
 

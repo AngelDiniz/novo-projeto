@@ -1,10 +1,21 @@
 class Conta {
     private Cliente titular;
     private double saldo;
+    private static int totalDeContas;
+
 
     public Conta(Cliente titular, double saldoInicial) {
         this.titular = titular;
         this.saldo = saldoInicial;
+    }
+
+    Conta(){
+        Conta.totalDeContas = Conta.totalDeContas + 1;
+
+    }
+
+    public static int getTotalDeContas() {
+        return Conta.totalDeContas;
     }
 
     public void depositar(double valor) {
@@ -34,4 +45,5 @@ class Conta {
     public Cliente getTitular() {
         return titular;
     }
+
 }
