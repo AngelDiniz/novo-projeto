@@ -1,4 +1,4 @@
-class Conta {
+public abstract class Conta {
     private Cliente titular;
     private double saldo;
     private static int totalDeContas;
